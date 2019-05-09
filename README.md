@@ -1,46 +1,6 @@
-# Backend
-## Models
-### User
-+ ID
-+ Gender
-+ Sexuality
-+ Role?
-+ Full name
-+ Email
-+ Password
-+ Description
-+ Last online
-+ Pictures
-### Interest
-+ ID
-+ From
-+ To
-### Match
-+ ID
-+ User 1
-+ User 2
-+ Messages
-+ Points
-### Message
-+ ID
-+ Match
-+ Sender
-+ Time
-+ Text
-### Picture
-+ ID
-+ User
-+ Picture (link)
-
-## End points
-|Model|End point|Type|Description|
-|-|-|-|-|
-|User|user/me|GET|Data of the current user.|
-||user/register|POST|Registration|
-||user/login|POST?|Login|
-||user/logout|POST?|Logout|
-||user/profile|PUT|Update profile|
-||user/update|PUT|Update account|
-|Interest|interest/add/{id}|POST|Interest from logged in user to id|
-|Match|match/me|GET|Gets all matches|
-||match/{id}/message|POST|Send message to match with id|
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/39c03246220e4c1f8296be3c555c4db3)](https://www.codacy.com/app/gabeeedev/spark?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=gabeeedev/spark&amp;utm_campaign=Badge_Grade)
+[![Build Status](https://travis-ci.com/gabeeedev/spark.svg?branch=master)](https://travis-ci.com/gabeeedev/spark)
+[![Maintainability](https://api.codeclimate.com/v1/badges/015a05a3ae512fca58cc/maintainability)](https://codeclimate.com/github/gabeeedev/spark/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/015a05a3ae512fca58cc/test_coverage)](https://codeclimate.com/github/gabeeedev/spark/test_coverage)
+# Spark (WIP)
+To-do: [link](https://github.com/gabeeedev/spark/projects/1)
