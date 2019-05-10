@@ -6,7 +6,7 @@ jobs:
     language: java
     jdk: oraclejdk8
     before_install:
-    - "chmod +x ./mvnw"
+    - chmod +x ./mvnw
     script:
     - "./mvnw clean test -B"
     before_deploy:
@@ -19,7 +19,7 @@ jobs:
       global:
       - CC_TEST_REPORTER_ID=af6242f9998c7e29002684f1f68c55763d6d880d5444b0971875097983da7712
     before_install:
-    - "chmod +x ./mvnw"
+    - chmod +x ./mvnw
     before_script:
     - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64
       > ./cc-test-reporter
@@ -37,7 +37,7 @@ notifications:
 deploy:
   provider: heroku
   api_key:
-    secure: L8I0J/WdyOVpmx12SFcWl5yffoNi1TC/6X47rBB2fC2Kp0jUbG0h1T1sDvppqB8Nm3K24+XM06tyThQBzg4X12RXzWgxQpPALMSWF06N0ye3VPHqYhEssBEpln15oogJn4UvE4/r/fLq+ukA4R6nHeapLXpEw5LwK7jKvtylCcH6KDKAPkoZIvG6PpwR+S6KVDDM6KFkcOoCogZ0E1uxsQrzpAZV63ClrPMetaFM6R4IK++z+MiEGWra5YnwyijspspslymVYIx2C3nOfWvHr/0exKp28CP0LBKW2Rr2y9odWrcL4WKXcbfYu5cgYZk/Oi+pVqaBO6R36KfXPc2qvMU8h/rD2eRAfRGk94mtac2D2coNelI8Rj6m2Fs/BkRS/2yarHCxogJoOG+x79RKFD0KPpcfPIeXJYTo8c0FeWeHyUc13aD538lwRcfuuZ2mODDROOYvZGe3dPp0p5a3o70hgjSh1mtOZApvAk4tgROqLnZZag61tEqYTC0YKjauF2aPTiSShRMguCBVBQU0gVEWTOkO9GgS6ydTVKgQCMcw12o/X8dp0zl/rx+3KhzkAzfmATxptB3UzcngTQ7sZy71xubmVxIxdBtkFsLeW92vvVQbOAlB2m6l/WTatZ2chaaHKB46d4j+6b0rm6WgivREdtl4KJpX+vUZ1vP0GvE=
+    secure: UgAwDorPHr8YewfcH5eJm8ntV5e1kpGuxQWWL7DUxmEXFALFkjrtLxGucamib2EJyF6W/FD4mD0ZuyicWuAv4cE3ndoH7VXQZme0jsSDT7uRiciHrWZCVDTNkspwv2myNW2mxo9d0QdnGKxBQS9vjM2UHbseT0gIpsW1Hl4BTEkLnu+Zl6ydXOpQe5FFbne0Ge5X9I7RVDqYtVlxK8ZAMNNOimoz/4OE2yzaCPZa4PPA5BROA6xhDEGkSrEtkBMwSjloB0dywe+C5szNkic/cPg86NtxzXOHQ8/nAqNmAFFSims5An7C94WPnZn3tG1dEVpibeU0n8WH/n3TD0hr2x6LmkGTlHdntZcAYHgMX6O+z8j9Yq4zhqR5W8KdlsIXch7Tck0Kmw4NjQuy6KBWhqaNw4oPVrunGNHf6w64ZZJKmebJ3ARZGf5QjEYtwhXRDBBKnczeuqaUha38Q+3qg8b1L6j8/meONjNYNIWjnlCgC+dnlynO2B9/7Q/1DAUibvYdM2SpVsQLvAxEReDhNOFy5e+4ImFZiXfgYBVWQAQC9O9V6A4bBs/vEvzBeRIQY9l/VU37Hbh2qPNNRxyvI2l+yTCS69pWugVDiFW+PH6S4gkAi3WxcQLWYZlgB/AxdfaYkqUamf89M1iPsBFaXnuH2agJVn6xLkoj8jROi3s=
   app: spark-backend-elte
   on:
     repo: arongyalai/spark-backend
