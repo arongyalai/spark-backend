@@ -2,16 +2,6 @@ sudo: required
 jobs:
   include:
   - stage: backend
-    name: backend tests
-    language: java
-    jdk: oraclejdk8
-    before_install:
-    - chmod +x ./mvnw
-    script:
-    - "./mvnw clean test -B"
-    before_deploy:
-    - git reset --hard HEAD
-  - stage: backend
     name: backend test and build
     language: java
     jdk: oraclejdk8
