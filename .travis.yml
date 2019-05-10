@@ -5,10 +5,9 @@ jobs:
     name: backend tests
     language: java
     jdk: oraclejdk8
-    before_script:
-    - cd backend
-    script:
+    before_install:
     - "chmod +x ./mvnw"
+    script:
     - "./mvnw clean test -B"
   - stage: backend
     name: backend test and build
