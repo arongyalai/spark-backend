@@ -1,12 +1,12 @@
 sudo: required
 jobs:
+  before_install:
+  - "chmod +x ./mvnw"
   include:
   - stage: backend
     name: backend tests
     language: java
     jdk: oraclejdk8
-    before_install:
-    - "chmod +x ./mvnw"
     script:
     - "./mvnw clean test -B"
   - stage: backend
@@ -17,7 +17,6 @@ jobs:
       global:
       - CC_TEST_REPORTER_ID=af6242f9998c7e29002684f1f68c55763d6d880d5444b0971875097983da7712
     before_script:
-    - "chmod +x ./mvnw"
     - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64
       > ./cc-test-reporter
     - chmod +x ./cc-test-reporter
