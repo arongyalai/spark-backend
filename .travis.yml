@@ -1,8 +1,8 @@
 sudo: required
 jobs:
-  before_install:
-  - "chmod +x ./mvnw"
   include:
+   before_install:
+  - "chmod +x ./mvnw"
   - stage: backend
     name: backend tests
     language: java
