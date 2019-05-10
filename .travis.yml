@@ -34,10 +34,3 @@ jobs:
     - "./cc-test-reporter upload-coverage -d -r af6242f9998c7e29002684f1f68c55763d6d880d5444b0971875097983da7712"
 notifications:
   email: false
-deploy:
-  provider: heroku
-  api_key:
-    secure: 64b937f4-40d8-4212-8aae-c2b7befa836f
-  app: spark-backend-elte
-  on:
-    repo: arongyalai/spark-backend
