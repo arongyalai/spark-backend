@@ -25,20 +25,8 @@ jobs:
     script:
     - "./mvnw clean install -B"
     after_script:
-    - cd ..
     - "./cc-test-reporter format-coverage -d -t jacoco ./backend/target/jacoco-ut/jacoco.xml"
     - "./cc-test-reporter upload-coverage -d -r 97887b04250b6f41da87ce276c49e3545783613103b718340452f95964c29f92"
-  - stage: frontend
-    name: frontend build
-    language: node_js
-    node_js:
-    - 10.15.3
-    before_script:
-    - cd frondend/spark
-    - npm install -g @angular/cli
-    - npm install --save-dev @angular-devkit/build-angular
-    script:
-    - ng build
 notifications:
   email: false
 deploy:
