@@ -9,7 +9,7 @@ jobs:
     - "chmod +x ./mvnw"
     script:
     - "./mvnw clean test -B"
-    after_script:
+    before_deploy:
     - git reset --hard HEAD
   - stage: backend
     name: backend test and build
@@ -27,10 +27,11 @@ jobs:
     - "./cc-test-reporter before-build"
     script:
     - "./mvnw clean install -B"
+    before_deploy:
+    - git reset --hard HEAD
     after_script:
     - "./cc-test-reporter format-coverage -d -t jacoco ./backend/target/jacoco-ut/jacoco.xml"
     - "./cc-test-reporter upload-coverage -d -r af6242f9998c7e29002684f1f68c55763d6d880d5444b0971875097983da7712"
-    - git reset --hard HEAD
 notifications:
   email: false
 deploy:
