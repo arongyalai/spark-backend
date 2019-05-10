@@ -17,6 +17,7 @@ jobs:
       global:
       - CC_TEST_REPORTER_ID=af6242f9998c7e29002684f1f68c55763d6d880d5444b0971875097983da7712
     before_script:
+    - chmod a+x ./mvnw
     - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64
       > ./cc-test-reporter
     - chmod +x ./cc-test-reporter
